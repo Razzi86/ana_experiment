@@ -1,0 +1,4 @@
+source;share/ana_1_1/local_setup.bash
+source;share/ana_1_1/local_setup.dsv
+source;share/ana_1_1/local_setup.sh
+source;share/ana_1_1/local_setup.zsh

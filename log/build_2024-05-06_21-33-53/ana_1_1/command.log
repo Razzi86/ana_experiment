@@ -1,0 +1,6 @@
+Invoking command in '/home/aidan/ros_ws/build/ana_1_1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/aidan/ros_ws/src/ana_1_1 -DCMAKE_INSTALL_PREFIX=/home/aidan/ros_ws/install/ana_1_1
+Invoked command in '/home/aidan/ros_ws/build/ana_1_1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/aidan/ros_ws/src/ana_1_1 -DCMAKE_INSTALL_PREFIX=/home/aidan/ros_ws/install/ana_1_1
+Invoking command in '/home/aidan/ros_ws/build/ana_1_1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros_ws/build/ana_1_1 -- -j6 -l6
+Invoked command in '/home/aidan/ros_ws/build/ana_1_1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/aidan/ros_ws/build/ana_1_1 -- -j6 -l6
+Invoking command in '/home/aidan/ros_ws/build/ana_1_1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros_ws/build/ana_1_1
+Invoked command in '/home/aidan/ros_ws/build/ana_1_1' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/aidan/ros_ws/build/ana_1_1

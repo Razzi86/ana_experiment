@@ -1,0 +1,5 @@
+gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
+
+check validity: 
+- check_urdf /path/to/urdf
+- xmllint --noout /path/to/sdf

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- Comment about the package and any notes. Move any other comments below the XML declaration. -->
+<package format="3">
+  <name>ana</name>
+  <version>0.1.0</version> <!-- It's good to start with a realistic version number -->
+  <description>A detailed description of the ana package.</description> <!-- Fill in a brief description of your package -->
+  <maintainer email="my_email@email.com">Aidan Reilly</maintainer>
+  <license>Apache-2.0</license> <!-- Replace with your chosen license, e.g., Apache-2.0, MIT, BSD, etc. -->
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>ament_cmake_ros</depend> <!-- Ensure this is actually a dependency -->
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

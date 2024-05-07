@@ -1,0 +1,127 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <world name="default">
+
+        <!-- Light source -->
+        <light type="directional" name="sun">
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 -0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <direction>-0.5 -0.5 -1</direction>
+        </light>
+
+        <!-- Ground Plane -->
+        <model name="ground_plane">
+            <static>true</static>
+            <link name="link">
+                <collision name="collision">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>100 100</size>
+                        </plane>
+                    </geometry>
+                </collision>
+                <visual name="visual">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>100 100</size>
+                        </plane>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <!-- Pillars -->
+        <model name="pillar_northwest">
+            <pose>-25 25 0.0 0 0 0</pose>
+            <link name="base">
+                <collision name="base_collision">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+                <visual name="base_visual">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="pillar_northeast">
+            <pose>25 25 0.0 0 0 0</pose>
+            <link name="base">
+                <collision name="base_collision">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+                <visual name="base_visual">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="pillar_southwest">
+            <pose>-25 -25 0.0 0 0 0</pose>
+            <link name="base">
+                <collision name="base_collision">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+                <visual name="base_visual">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+        <model name="pillar_southeast">
+            <pose>25 -25 0.0 0 0 0</pose>
+            <link name="base">
+                <collision name="base_collision">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+                <visual name="base_visual">
+                    <geometry>
+                        <cylinder>
+                            <radius>1</radius>
+                            <length>1</length>
+                        </cylinder>
+                    </geometry>
+                </visual>
+            </link>
+        </model>
+
+    </world>
+</sdf>

@@ -1,0 +1,2 @@
+Invoking command in '/home/aidan/ros_ws/build/ana_1_1': /usr/bin/cmake --build /home/aidan/ros_ws/build/ana_1_1 -- -j6 -l6
+Invoked command in '/home/aidan/ros_ws/build/ana_1_1' returned '2': /usr/bin/cmake --build /home/aidan/ros_ws/build/ana_1_1 -- -j6 -l6

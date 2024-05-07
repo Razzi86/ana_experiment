@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot name="ana_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <!-- Define the camera joint fixed to the chassis -->
+    <joint name="camera_joint" type="fixed">
+        <parent link="chassis"/>
+        <child link="camera_link"/>
+        <origin xyz="0.123 0 0.12" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Camera link with a visual representation -->
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0.02 -0.0015 -0.0057" rpy="1.5708 0 1.5708"/>
+            <geometry>
+                <mesh filename="package://ana/meshes/d435i.stl"/>
+            </geometry>
+            <material name="grey">
+                <color rgba="0.5 0.5 0.5 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <!-- Joint for camera optical frame, fixed in position but different orientation -->
+    <joint name="camera_optical_joint" type="fixed">
+        <parent link="camera_link"/>
+        <child link="camera_link_optical"/>
+        <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708"/>
+    </joint>
+
+    <!-- Optical link of the camera, often used for correctly oriented sensor data -->
+    <link name="camera_link_optical">
+        <inertial>
+            <mass value="0.01"/>
+            <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+        </inertial>
+    </link>
+
+    <!-- Gazebo-specific sensor definitions -->
+    <gazebo reference="camera_link">
+        <sensor name="camera" type="depth">
+            <always_on>1</always_on>
+            <update_rate>20</update_rate>
+            <camera name="camera">
+                <horizontal_fov>1.501</horizontal_fov>
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>B8G8R8</format>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>8.0</far>
+                </clip>
+            </camera>
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <cameraName>camera</cameraName>
+                <frameName>camera_link_optical</frameName>
+                <min_depth>0.1</min_depth>
+                <max_depth>100</max_depth>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+</robot>
